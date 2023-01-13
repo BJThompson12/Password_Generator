@@ -19,7 +19,7 @@ function getRandomUpperCase () {
   var upperCaseChoice = window.confirm('Would you like to use lower case letters in your password?')
   console.log(upperCaseChoice);
   }
-  
+
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
@@ -28,15 +28,20 @@ function generatePassword () {
 
 // 1. Prompt for password criteria
 //  a. Password Length 8 < 128
-  var lengthChoice = window.prompt('Please select enter your password length between 8 and 128 characters')
+  var lengthChoice = window.prompt('Please enter your password length between 8 and 128 characters')
   console.log(lengthChoice);
-  if (lengthChoice > 7 && lengthChoice < 129){
-    window.confirm('You have selected ' + lengthChoice + ' Character Length')}
+  if (lengthChoice < 8 || lengthChoice > 128){
+    window.alert('Password must be between 8 and 128 characters');
+    generatePassword();
+   
+  }
     else {
-      window.alert('Password must be between 8 and 128 characters');
-      generatePassword();
+      window.confirm('You have selected ' + lengthChoice + ' Character Length')
+      getRandomUpperCase();
+      
+      
 
-    getRandomUpperCase();
+   
   
   }
 
