@@ -24,7 +24,12 @@ function getRandomUpperCase () {
   upperCaseChoice = window.confirm('Would you like to use upper case letters in your password?')
   console.log(upperCaseChoice);
   }
-  // console.log(getRandomUpperCase())
+
+function getRandomLowerCase () {
+  lowerCaseChoice = window.confirm('Would you like to use lower case letters in your password?')
+  console.log(lowerCaseChoice);
+}
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
