@@ -33,9 +33,7 @@ function generatePassword () {
       lengthChoice: lengthChoice,
 
     }
-    // 
-    return passwordChoices;
-  }
+
 //  b. lowercase, uppercase, numbers, special characters (confirm prompt) look up parse int bc it has to convert the srting into an integer [arse int before the prompt to convert to a integer has to be a number to loop through ] click ok if want speacial if yes loop through array abd randomly pick 
 
 
@@ -43,15 +41,9 @@ function generatePassword () {
 // 3. generate password based on criteria
 // 4. display on page
 
-
-  return "generated password will go here!"
-
-}
-
-
-
-
-
+    // generated password will go here
+    return passwordChoices;
+  }
 
 
 // Write password to the #password input
