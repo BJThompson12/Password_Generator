@@ -43,11 +43,22 @@ function getRandomNumber () {
 function getRandomSymbol () {
   symbolChoice = window.confirm('Would you like to use Symbols in your password?')
   console.log(symbolChoice);
+  joinChoices ();
 }
 
 function joinChoices () {
+  if (upperCaseChoice === true){
+  (joinedChoices = (joinedChoices + upperCaseCharacters))
+  }
+  console.log(joinedChoices);
 
+  if (lowerCaseChoice === true){
+    (joinedChoices = (joinedChoices + lowerCaseCharacters))
+    }
+    console.log(joinedChoices);
 }
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
