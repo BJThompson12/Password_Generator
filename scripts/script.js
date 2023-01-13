@@ -1,27 +1,37 @@
-// Assignment code here
 
+// // Get references to the #generate element
+// let generateBtn = document.querySelector("#generate");
 
-// Get references to the #generate element
-let generateBtn = document.querySelector("#generate");
+var charCount=8
+const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[]\\^_`{|}~"
 
-// Write password to the #password input
-function writePassword() {
-  let password = generatePassword();
-  const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[]\\^_`{|}~"
-
-  let passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+for (var i = 0; i < charCount; i++) {
+  var passwordNew = chars[Math.floor(Math.random() * chars.length)];
+  console.log(passwordNew);
 }
 
-//Password Choices functions
-function getRandonSymbol() {
-  const symbol = "!\"#$%&'()*+,-./:;<=>?@[]\\^_`{|}~"
-  return symbol[Math.floor(Math.random() * symbol.length)]
-}
+// // Write password to the #password input
+// function writePassword() {
+//   let generatedPassword =();
+ 
+  // for (var i = 0; i < charCount; i++){
+  // var passwordNew = chars[Math.floor(Math.random())]
+  // console.log(passwordNew);
+  // // }
+  // let passwordText = document.querySelector("#password");
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  // passwordText.value = password;
 
-console.log(getRandonSymbol())
+// }
+
+// //Password Choices functions
+// function getRandonSymbol() {
+//   const symbol = "!\"#$%&'()*+,-./:;<=>?@[]\\^_`{|}~"
+//   return symbol[Math.floor(Math.random() * symbol.length)]
+// }
+
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
+
+// console.log(getRandonSymbol())
+// // console.log(writePassword());
