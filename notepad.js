@@ -11,6 +11,8 @@ for (var i = 0; i < charCount; i++) {
   var passwordNew = chars[Math.floor(Math.random() * chars.length)];
   console.log(passwordNew);
 }
+getRandomUpperCase()
+console.log(upperCaseChoice.toString)
 
 // // Write password to the #password input
 // function writePassword() {
@@ -44,3 +46,11 @@ plug in an argumaent called array so you can pass it in and pull it through
 
 seperate arrays and then cancatinate and push into a different array to generateBtn
 push the characters into the array
+
+if statements if truee then generate function
+to get character string its inn arrays, will have to combine the arrays into one, then join in a string ans use as the characters list (join method on array type)
+
+declare variable at start fo function and set to empty string
+run if chaining 
+if true add to the declared variable  empty variable = empty vairable + 
+returbn the variable after as valid string
