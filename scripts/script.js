@@ -4,22 +4,24 @@ var upperCaseCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','
 ].join('');
 
 var lowerCaseCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
-]
+].join('');
 
 var numberCharacters = ['0','1','2','3','4','5','6','7','8','9','@'
 
-]
+].join('');
 
 var symbolCharacters = ['!','#','$','%','&','(',',',')','*','+',',','-','.','/',',:',';','<','=','>','?','@','[',']','^','_','{','|','}','~'
 
-]
+].join('');
 var upperCaseChoice = ''
+var lowerCaseChoice = ''
+var symbolChoice = ''
+var specialCharacterChoice = ''
 
 // Functions to generate choices
 
 function getRandomUpperCase () {
   upperCaseChoice = window.confirm('Would you like to use upper case letters in your password?')
-  // return upperCaseChoice; 
   console.log(upperCaseChoice);
   }
   // console.log(getRandomUpperCase())
