@@ -13,24 +13,41 @@ var numberCharacters = ['0','1','2','3','4','5','6','7','8','9','@'
 var symbolCharacters = ['!','#','$','%','&','(',',',')','*','+',',','-','.','/',',:',';','<','=','>','?','@','[',']','^','_','{','|','}','~'
 
 ].join('');
+
 var upperCaseChoice = ''
 var lowerCaseChoice = ''
+var numberChoice = ''
 var symbolChoice = ''
-var specialCharacterChoice = ''
+var joinedChoices = ''
 
 // Functions to generate choices
 
 function getRandomUpperCase () {
   upperCaseChoice = window.confirm('Would you like to use upper case letters in your password?')
   console.log(upperCaseChoice);
+  getRandomLowerCase();
   }
 
 function getRandomLowerCase () {
   lowerCaseChoice = window.confirm('Would you like to use lower case letters in your password?')
   console.log(lowerCaseChoice);
+  getRandomNumber();
 }
 
+function getRandomNumber () {
+  numberChoice = window.confirm('Would you like to use Numbers in your password?')
+  console.log(numberChoice);
+  getRandomSymbol();
+}
 
+function getRandomSymbol () {
+  symbolChoice = window.confirm('Would you like to use Symbols in your password?')
+  console.log(symbolChoice);
+}
+
+function joinChoices () {
+
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
@@ -54,7 +71,7 @@ function generatePassword () {
       
 
    
-  console.log(lengthChoice, upperCaseChoice);
+  console.log(lengthChoice, upperCaseChoice,lowerCaseChoice,numberChoice,symbolChoice);
   }
 
     var passwordChoices = {
