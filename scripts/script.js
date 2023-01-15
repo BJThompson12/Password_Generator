@@ -25,7 +25,7 @@ const upperCaseCharacters = [
   'W',
   'X',
   'Y',
-  'Z',
+  'Z'
 ];
 
 const lowerCaseCharacters = [
@@ -54,10 +54,10 @@ const lowerCaseCharacters = [
   'w',
   'x',
   'y',
-  'z',
+  'z'
 ];
 
-const numberCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const numberCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const symbolCharacters = [
   '!',
@@ -74,7 +74,7 @@ const symbolCharacters = [
   '-',
   '.',
   '/',
-  ',:',
+  ':',
   ';',
   '<',
   '=',
@@ -88,7 +88,7 @@ const symbolCharacters = [
   '{',
   '|',
   '}',
-  '~',
+  '~'
 ];
 
 let lengthChoice = '';
@@ -151,25 +151,25 @@ function getChoices() {
     generatePassword();
   }
   //to clear out joinedChoices 
-  joinedChoices = '';
+  joinedChoices = [];
 
   // Filter out no selections
-  if (upperCaseChoice == true) {
-    joinedChoices = joinedChoices.concat(upperCaseCharacters);
+  if (upperCaseChoice === true) {
+    joinedChoices = upperCaseCharacters;
   }
   console.log(joinedChoices);
 
-  if (lowerCaseChoice == true) {
+  if (lowerCaseChoice === true) {
     joinedChoices = joinedChoices.concat(lowerCaseCharacters);
   }
   console.log(joinedChoices);
 
-  if (numberChoice == true) {
+  if (numberChoice === true) {
     joinedChoices = joinedChoices.concat(numberCharacters);
   }
   console.log(joinedChoices);
 
-  if (symbolChoice == true) {
+  if (symbolChoice === true) {
     joinedChoices = joinedChoices.concat(symbolCharacters);
   }
   console.log(joinedChoices);
@@ -185,12 +185,12 @@ function generatePassword() {
   // View characters to be used in password
   console.log(joinedChoices);
 
-  // make sure password is empty every run
+  // make sure password is empty and not cached every run
   password = '';
 
   for (let i = 0; i < lengthChoice; i++) {
-    randomChoice = [Math.floor(Math.random() * joinedChoices.length)];
-    password = password + joinedChoices[randomChoice];
+    password += joinedChoices[Math.floor(Math.random() * joinedChoices.length)];
+    // password = password + joinedChoices[randomChoice];
   }
   // View password in log
   console.log(password);
