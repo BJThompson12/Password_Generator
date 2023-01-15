@@ -1,5 +1,5 @@
 // Array of selections to be included in password
-var upperCaseCharacters = [
+const upperCaseCharacters = [
   'A',
   'B',
   'C',
@@ -28,7 +28,7 @@ var upperCaseCharacters = [
   'Z',
 ];
 
-var lowerCaseCharacters = [
+const lowerCaseCharacters = [
   'a',
   'b',
   'c',
@@ -57,9 +57,9 @@ var lowerCaseCharacters = [
   'z',
 ];
 
-var numberCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const numberCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-var symbolCharacters = [
+const symbolCharacters = [
   '!',
   '#',
   '$',
@@ -91,16 +91,16 @@ var symbolCharacters = [
   '~',
 ];
 
-var lengthChoice = '';
-var upperCaseChoice = '';
-var lowerCaseChoice = '';
-var numberChoice = '';
-var symbolChoice = '';
-var joinedChoices = '';
-var randomChoice = '';
+let lengthChoice = '';
+let upperCaseChoice = '';
+let lowerCaseChoice = '';
+let numberChoice = '';
+let symbolChoice = '';
+let joinedChoices = '';
+let randomChoice = '';
 
 // Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
+let generateBtn = document.querySelector('#generate');
 
 //  Capture choices from window prompts and confirms
 function getChoices() {
@@ -188,7 +188,7 @@ function generatePassword() {
   // make sure password is empty every run
   password = '';
 
-  for (var i = 0; i < lengthChoice; i++) {
+  for (let i = 0; i < lengthChoice; i++) {
     randomChoice = [Math.floor(Math.random() * joinedChoices.length)];
     password = password + joinedChoices[randomChoice];
   }
@@ -199,8 +199,8 @@ function generatePassword() {
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
+  let password = generatePassword();
+  let passwordText = document.querySelector('#password');
 
   passwordText.value = password;
 }
