@@ -19,6 +19,7 @@ var lowerCaseChoice = ''
 var numberChoice = ''
 var symbolChoice = ''
 var joinedChoices = ''
+var passwordChoice = ''
 
 // Functions to generate choices
 
@@ -59,9 +60,20 @@ function joinChoices () {
   console.log(joinedChoices);
 
   if (lowerCaseChoice === true){
-    (joinedChoices = (joinedChoices + lowerCaseCharacters))
-    }
-    console.log(joinedChoices);
+  (joinedChoices = (joinedChoices + lowerCaseCharacters))
+  }
+  console.log(joinedChoices);
+
+  if (numberChoice === true){
+  (joinedChoices = (joinedChoices + numberCharacters))
+  }
+  console.log(joinedChoices);
+    
+  if (symbolChoice === true){
+  (joinedChoices = (joinedChoices + symbolCharacters))
+  }
+  console.log(joinedChoices);
+
 }
 
 
@@ -83,17 +95,13 @@ function generatePassword () {
     else {
       getRandomUpperCase();
       
-      
-      
-
-   
   console.log(lengthChoice, upperCaseChoice,lowerCaseChoice,numberChoice,symbolChoice);
   }
 
-    var passwordChoices = {
-      lengthChoice: lengthChoice,
+  passwordChoice = ('Password Here')
+      
 
-    }
+  
 
 //  b. lowercase, uppercase, numbers, special characters (confirm prompt) look up parse int bc it has to convert the srting into an integer [arse int before the prompt to convert to a integer has to be a number to loop through ] click ok if want speacial if yes loop through array abd randomly pick 
 
@@ -103,13 +111,13 @@ function generatePassword () {
 // 4. display on page
 
     // generated password will go here
-    return passwordChoices;
+    return passwordChoice;
   }
 
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  passwordChoice = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
