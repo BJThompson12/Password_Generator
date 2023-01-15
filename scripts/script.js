@@ -21,6 +21,7 @@ var numberChoice = ''
 var symbolChoice = ''
 var joinedChoices = ''
 var passwordChoice = ''
+var randomPassword = ''
 
 // Functions to generate choices
 
@@ -74,18 +75,20 @@ function joinChoices () {
   (joinedChoices = (joinedChoices + symbolCharacters))
   }
   console.log(joinedChoices);
-
-  pickRandomPassword();
-}
-// function to pick the password randomly
-function pickRandomPassword (){
+  
   for ( let i = 0; i < lengthChoice; i++) {
-    var passwordNew = joinedChoices[Math.floor(Math.random() * lengthChoice - 1)];
-    console.log(passwordNew);
-    return passwordNew;
-   
+    randomPassword = joinedChoices[Math.floor(Math.random() * joinedChoices.length)];
+    console.log(randomPassword);
+ }
+  //  pickRandomPassword();
+
   }
-}
+  // function pickRandomPassword (){
+  //   for ( let i = 0; i < lengthChoice; i++) {
+  //     randomPassword =joinedChoices[Math.floor(Math.random() * lengthChoice)];
+  //     console.log(randomPassword);
+  //  }
+  // }
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
