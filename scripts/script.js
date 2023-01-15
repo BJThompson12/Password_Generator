@@ -25,7 +25,7 @@ const upperCaseCharacters = [
   'W',
   'X',
   'Y',
-  'Z'
+  'Z',
 ];
 
 const lowerCaseCharacters = [
@@ -54,7 +54,7 @@ const lowerCaseCharacters = [
   'w',
   'x',
   'y',
-  'z'
+  'z',
 ];
 
 const numberCharacters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -88,7 +88,7 @@ const symbolCharacters = [
   '{',
   '|',
   '}',
-  '~'
+  '~',
 ];
 
 let lengthChoice = '';
@@ -145,12 +145,12 @@ function getChoices() {
   ) {
     console.log(symbolChoice);
   }
-// Must make a selection or return to start of selections
+  // Must make a selection or return to start of selections
   if (!upperCaseChoice && !lowerCaseChoice && !numberChoice && !symbolChoice) {
     window.alert('You must choose at least one character type');
     generatePassword();
   }
-  //to clear out joinedChoices 
+  //to clear out joinedChoices
   joinedChoices = [];
 
   // Filter out no selections
