@@ -24,7 +24,7 @@ N/A
 
 ## Deployment
 
-<a href="https://bjthompson12.github.io/BThompson-Professional-Portfolio/">Deployment Link</a>
+<a href="https://bjthompson12.github.io/Password_Generator/">Deployment Link</a>
 
 ## Credits
 
