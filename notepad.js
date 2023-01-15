@@ -54,3 +54,104 @@ declare variable at start fo function and set to empty string
 run if chaining 
 if true add to the declared variable  empty variable = empty vairable + 
 returbn the variable after as valid string
+
+// Functions to generate choices
+
+function getRandomUpperCase () {
+  upperCaseChoice = window.confirm('Would you like to use upper case letters in your password?')
+  console.log(upperCaseChoice);
+  getRandomLowerCase();
+  }
+
+function getRandomLowerCase () {
+  lowerCaseChoice = window.confirm('Would you like to use lower case letters in your password?')
+  console.log(lowerCaseChoice);
+  getRandomNumber();
+}
+
+function getRandomNumber () {
+  numberChoice = window.confirm('Would you like to use Numbers in your password?')
+  console.log(numberChoice);
+  getRandomSymbol();
+}
+
+function getRandomSymbol () {
+  symbolChoice = window.confirm('Would you like to use Symbols in your password?')
+  console.log(symbolChoice);
+    if (!upperCaseChoice && !lowerCaseChoice && !numberChoice && !symbolChoice){
+    window.alert("You must choose at least one character type");
+    generatePassword();
+  }
+    else{
+    joinChoices ();
+  }
+}
+
+  lengthChoice = parseInt(window.prompt('Please enter your password length between 8 and 128 characters'))
+  console.log(lengthChoice);
+  if (lengthChoice < 8 || lengthChoice > 128 || !lengthChoice){
+    window.alert('Password must be between 8 and 128 characters');
+    generatePassword();
+  }
+
+  if (upperCaseChoice = window.confirm('Would you like to use upper case letters in your password?'))
+    console.log(upperCaseChoice);
+
+  if (lowerCaseChoice = window.confirm('Would you like to use lower case letters in your password?'))
+  console.log(lowerCaseChoice);
+
+  if (numberChoice = window.confirm('Would you like to use Numbers in your password?'))
+  console.log(numberChoice);
+
+  if (symbolChoice = window.confirm('Would you like to use Symbols in your password?'))
+  console.log(symbolChoice);
+
+  if (!upperCaseChoice && !lowerCaseChoice && !numberChoice && !symbolChoice)
+    window.alert("You must choose at least one character type");
+    // generatePassword();
+
+  if (upperCaseChoice === true){
+    (joinedChoices = (joinedChoices + upperCaseCharacters))
+    }
+    console.log(joinedChoices);
+    
+  if (lowerCaseChoice === true){
+    (joinedChoices = (joinedChoices + lowerCaseCharacters))
+     }
+     console.log(joinedChoices);
+    
+  if (numberChoice === true){
+    (joinedChoices = (joinedChoices + numberCharacters))
+     }
+     console.log(joinedChoices);
+        
+  if (symbolChoice === true){
+    (joinedChoices = (joinedChoices + symbolCharacters))
+     }
+     console.log(joinedChoices);
+function joinChoices () {
+  if (upperCaseChoice === true){
+  (joinedChoices = (joinedChoices + upperCaseCharacters))
+  }
+  console.log(joinedChoices);
+
+  if (lowerCaseChoice === true){
+  (joinedChoices = (joinedChoices + lowerCaseCharacters))
+  }
+  console.log(joinedChoices);
+
+  if (numberChoice === true){
+  (joinedChoices = (joinedChoices + numberCharacters))
+  }
+  console.log(joinedChoices);
+    
+  if (symbolChoice === true){
+  (joinedChoices = (joinedChoices + symbolCharacters))
+  }
+  console.log(joinedChoices);
+  
+  for ( let i = 0; i < lengthChoice; i++) {
+    randomPassword = joinedChoices[Math.floor(Math.random() * joinedChoices.length)];
+    console.log(randomPassword);
+  }
+ }
