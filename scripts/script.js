@@ -43,7 +43,13 @@ function getRandomNumber () {
 function getRandomSymbol () {
   symbolChoice = window.confirm('Would you like to use Symbols in your password?')
   console.log(symbolChoice);
+  if (getRandomLowerCase === false && getRandomUpperCase === false && getRandomNumber === false && getRandomSymbol === false){
+    window.alert("You must choice at least one character type");
+    generatePassword();
+  }
+  else{
   joinChoices ();
+  }
 }
 
 function joinChoices () {
@@ -75,7 +81,6 @@ function generatePassword () {
    
   }
     else {
-      window.confirm('You have selected ' + lengthChoice + ' Character Length')
       getRandomUpperCase();
       
       
