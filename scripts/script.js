@@ -1,17 +1,17 @@
 // Assignment code here
 // Array of selections to be included in password
 var upperCaseCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'
-].join('');
+];
 
 var lowerCaseCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
-].join('');
+];
 
 var numberCharacters = ['0','1','2','3','4','5','6','7','8','9'
-].join('');
+];
 
 var symbolCharacters = ['!','#','$','%','&','(',',',')','*','+',',','-','.','/',',:',';','<','=','>','?','@','[',']','^','_','{','|','}','~'
 
-].join('')
+];
 
 var lengthChoice = ''
 var upperCaseChoice = ''
@@ -47,27 +47,29 @@ function getChoices() {
   }
 
   if (!upperCaseChoice && !lowerCaseChoice && !numberChoice && !symbolChoice){
-    window.alert("You must choose at least one character type");
+    window.alert('You must choose at least one character type');
     generatePassword();
   }
-  
-  if (upperCaseChoice === true){
-    (joinedChoices = (joinedChoices + upperCaseCharacters))
+  //to clear out joinedChoices
+  joinedChoices = '';
+
+  if (upperCaseChoice == true){
+    (joinedChoices = joinedChoices.concat(upperCaseCharacters))
     }
     console.log(joinedChoices);
     
-  if (lowerCaseChoice === true){
-    (joinedChoices = (joinedChoices + lowerCaseCharacters))
+  if (lowerCaseChoice == true){
+    (joinedChoices = joinedChoices.concat(lowerCaseCharacters))
      }
      console.log(joinedChoices);
     
-  if (numberChoice === true){
-    (joinedChoices = (joinedChoices + numberCharacters))
+  if (numberChoice == true){
+    (joinedChoices = joinedChoices.concat(numberCharacters))
      }
      console.log(joinedChoices);
         
-  if (symbolChoice === true){
-    (joinedChoices = (joinedChoices + symbolCharacters))
+  if (symbolChoice == true){
+    (joinedChoices = joinedChoices.concat(symbolCharacters))
      }
      console.log(joinedChoices);
      return joinedChoices;
@@ -78,9 +80,8 @@ function generatePassword () {
   getChoices();
   console.log(lowerCaseChoice, upperCaseChoice, numberChoice, symbolChoice);
   console.log(joinedChoices);
-
- 
-      
+  
+  password = ''
   for ( let i = 0; i < lengthChoice; i++) {
     password = joinedChoices[Math.floor(Math.random() * joinedChoices.length)];
     console.log(password);
