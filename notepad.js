@@ -7,7 +7,7 @@
 var charCount=8
 const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[]\\^_`{|}~"
 
-for (var i = 0; i < charCount; i++) {
+for ( i = 0; i < charCount; i++) {
   var passwordNew = chars[Math.floor(Math.random() * chars.length)];
   console.log(passwordNew);
 }

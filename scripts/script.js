@@ -6,7 +6,7 @@ var upperCaseCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','
 var lowerCaseCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
 ].join('');
 
-var numberCharacters = ['0','1','2','3','4','5','6','7','8','9','@'
+var numberCharacters = ['0','1','2','3','4','5','6','7','8','9'
 
 ].join('');
 
@@ -14,6 +14,7 @@ var symbolCharacters = ['!','#','$','%','&','(',',',')','*','+',',','-','.','/',
 
 ].join('');
 
+var lengthChoice = ''
 var upperCaseChoice = ''
 var lowerCaseChoice = ''
 var numberChoice = ''
@@ -74,9 +75,17 @@ function joinChoices () {
   }
   console.log(joinedChoices);
 
+  pickRandomPassword();
 }
-
-
+// function to pick the password randomly
+function pickRandomPassword (){
+  for ( let i = 0; i < lengthChoice; i++) {
+    var passwordNew = joinedChoices[Math.floor(Math.random() * lengthChoice - 1)];
+    console.log(passwordNew);
+    return passwordNew;
+   
+  }
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
@@ -85,7 +94,7 @@ function generatePassword () {
 
 // 1. Prompt for password criteria
 //  a. Password Length 8 < 128
-  var lengthChoice = window.prompt('Please enter your password length between 8 and 128 characters')
+  lengthChoice = window.prompt('Please enter your password length between 8 and 128 characters')
   console.log(lengthChoice);
   if (lengthChoice < 8 || lengthChoice > 128){
     window.alert('Password must be between 8 and 128 characters');
@@ -95,7 +104,7 @@ function generatePassword () {
     else {
       getRandomUpperCase();
       
-  console.log(lengthChoice, upperCaseChoice,lowerCaseChoice,numberChoice,symbolChoice);
+  // console.log(lengthChoice, upperCaseChoice,lowerCaseChoice,numberChoice,symbolChoice);
   }
 
   passwordChoice = ('Password Here')
