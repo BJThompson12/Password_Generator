@@ -19,6 +19,7 @@ var lowerCaseChoice = ''
 var numberChoice = ''
 var symbolChoice = ''
 var joinedChoices = ''
+var randomChoice = ''
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
@@ -82,12 +83,13 @@ function generatePassword () {
   console.log(joinedChoices);
   
   password = ''
-  for ( let i = 0; i < lengthChoice; i++) {
-    password = joinedChoices[Math.floor(Math.random() * joinedChoices.length)];
-    console.log(password);
-    return password;
-  
+
+  for ( var i = 0; i < lengthChoice; i++) {
+     randomChoice = [Math.floor(Math.random() * joinedChoices.length)]
+     password = password + joinedChoices[randomChoice];
   }
+    console.log(password);
+    return password;  
 }
 
 // Write password to the #password input
