@@ -98,9 +98,6 @@ let numberChoice = '';
 let symbolChoice = '';
 let joinedChoices = '';
 
-// Get references to the #generate element
-let generateBtn = document.querySelector('#generate');
-
 //  Capture choices from window prompts and confirms
 function getChoices() {
   lengthChoice = parseInt(
@@ -111,6 +108,7 @@ function getChoices() {
   console.log(lengthChoice);
   if (lengthChoice < 8 || lengthChoice > 128 || !lengthChoice) {
     window.alert('Password must be between 8 and 128 characters');
+   return generatePassword();
   }
   if (
     (upperCaseChoice = window.confirm(
@@ -201,6 +199,9 @@ function writePassword() {
 
   passwordText.value = password;
 }
+
+// Get references to the #generate element
+let generateBtn = document.querySelector('#generate');
 
 // Add event listener to generate button!
 generateBtn.addEventListener('click', writePassword);
