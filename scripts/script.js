@@ -97,7 +97,6 @@ let lowerCaseChoice = '';
 let numberChoice = '';
 let symbolChoice = '';
 let joinedChoices = '';
-let randomChoice = '';
 
 // Get references to the #generate element
 let generateBtn = document.querySelector('#generate');
@@ -106,7 +105,7 @@ let generateBtn = document.querySelector('#generate');
 function getChoices() {
   lengthChoice = parseInt(
     window.prompt(
-      'Please enter your password length between 8 and 128 characters'
+      'Please enter password length between 8 and 128 characters'
     )
   );
   console.log(lengthChoice);
@@ -189,7 +188,6 @@ function generatePassword() {
 
   for (let i = 0; i < lengthChoice; i++) {
     password += joinedChoices[Math.floor(Math.random() * joinedChoices.length)];
-    // password = password + joinedChoices[randomChoice];
   }
   // View password in log
   console.log(password);
