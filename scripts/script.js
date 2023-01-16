@@ -112,7 +112,6 @@ function getChoices() {
   console.log(lengthChoice);
   if (lengthChoice < 8 || lengthChoice > 128 || !lengthChoice) {
     window.alert('Password must be between 8 and 128 characters');
-    generatePassword();
   }
   if (
     (upperCaseChoice = window.confirm(
