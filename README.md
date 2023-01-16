@@ -1,9 +1,9 @@
-# Brandon ThompsonProfessional-Portfolio
+# Password Generator
 Repo contains a web version of a Password Generator.
 
 ## Description
 
-
+The Passwor Generator allows a user to create a password based on their selected choices. Parameters for passwords are password length, lower case characters, upper case characters, numbers and/or symbols. 
 
 ## Installation
 
@@ -15,7 +15,7 @@ N/A
 
 ## Usage
 
-
+The Password Generator can be use in any web browser. 
 
 ## Screenshot
 
@@ -28,7 +28,7 @@ N/A
 
 ## Credits
 
-N/A
+The password generator was created with the assistance of cohorts, Blair and Christina, and Beau fro the AskBCS slack channel. They were pivotal i the debugging of code and implementing my logic. 
 
 ## License
 
